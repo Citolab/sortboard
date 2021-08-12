@@ -1,0 +1,19 @@
+{
+  "projects": {
+    "default": "citolab-sortboard",
+    "citolab-sortboard": "citolab-sortboard",
+    "docent-citolab-sortboard": "citolab-sortboard"
+  },
+  "targets": {
+    "citolab-sortboard": {
+      "hosting": {
+        "sortboard": [
+          "citolab-sortboard"
+        ],
+        "leraar-dashboard": [
+          "docent-citolab-sortboard"
+        ]
+      }
+    }
+  }
+}

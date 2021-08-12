@@ -1,0 +1,41 @@
+rules_version = '2';
+// Allow read/write access on all documents to any user signed in to the application
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /activity/{document=**} {
+      allow read: if request.auth != null
+      allow create, update: if request.auth != null && request.resource.data.createdBy == request.auth.uid;
+    }
+    match /teacher/{userId}/{documents=**} {
+      allow read: if request.auth != null && request.auth.uid == userId
+    }
+    match /student_actions/{userId} {
+      allow create: if request.auth != null && request.auth.uid == userId;
+
+        // Explicitly define rules for the 'actions' subcollection
+        match /actions/{documents=**} {
+          allow create: if request.auth != null && request.auth.uid == userId;
+        }
+    }
+    match /student_actions_dev/{userId} {
+      allow create: if request.auth != null && request.auth.uid == userId;
+
+        // Explicitly define rules for the 'actions' subcollection
+        match /actions/{documents=**} {
+          allow create: if request.auth != null && request.auth.uid == userId;
+        }
+    }
+    match /sort_state/{userId} {
+			allow read, write, update: if request.auth != null && request.auth.uid == userId; 
+    }
+    match /sort_state_dev/{userId} {
+			allow read, write, update: if request.auth != null && request.auth.uid == userId; 
+    }
+    match /user_actions/{userId} {
+    	allow create: if true
+    }
+    match /user_actions_dev/{userId} {
+    	allow create: if true
+    } 
+  }
+}

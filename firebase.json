@@ -1,0 +1,50 @@
+{
+  "functions": {
+    "predeploy": [
+      "nx build functions"
+    ],
+    "source": "dist/apps/functions"
+  },
+  "hosting": [
+    {
+      "target": "sortboard",
+      "public": "dist/apps/sortboard",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "predeploy": [
+        "nx build sortboard --prod"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    },
+    {
+      "target": "leraar-dashboard",
+      "public": "dist/apps/leraar-dashboard",
+      "predeploy": [
+        "nx build leraar-dashboard --prod"
+      ],
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ],
+  "firestore": {
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  }
+}
