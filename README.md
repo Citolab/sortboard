@@ -2,7 +2,7 @@
  
 Sortboard is an application that used the <a href="https://en.wikipedia.org/wiki/Q_methodology">Q Methodology</a>.
 
-This application in created to use in primary education. There is also an application created for secondary/higher education which can be found <a href="https://github.com/Citolab/qsort">here</a>
+This application is created for primary education. There is also an application created for secondary/higher education which can be found <a href="https://github.com/Citolab/qsort">here</a>
 
 <a href="https://www.cito.nl/kennis-en-innovatie/prototypes/projecten/sortboard">Click here</a> for more information (Dutch only).
 
