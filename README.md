@@ -21,6 +21,6 @@ The dashboard of the teacher uses read models to view the students data. Firebas
 
 ### static data
 
-The cards that needed to be sorted are hard-coded here: ```libs\data\src\lib\static.ts``
+The cards to be sort are hard-coded here: ```libs\data\src\lib\static.ts``
 
 
