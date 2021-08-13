@@ -1,6 +1,8 @@
-# Sortboard
+# Sortboard 
  
-Sortboard is an application that used the <a href="https://en.wikipedia.org/wiki/Q_methodology">Q Methodology</a>.
+Sortboard is an application based on the <a href="https://en.wikipedia.org/wiki/Q_methodology">Q Methodology</a>.
+
+![alt text](screenshot.png)
 
 This application is created for primary education. There is also an application created for secondary/higher education which can be found <a href="https://github.com/Citolab/qsort">here</a>
 
@@ -8,9 +10,10 @@ This application is created for primary education. There is also an application 
 
 The live version can be found here: <a href="https://citolab-sortboard.web.app/">https://citolab-sortboard.web.app/</a> and the teacher dashboard: <a href="https://docent-citolab-sortboard.web.app/">https://docent-citolab-sortboard.web.app/</a>
 
+
 # Techniques
 
-This repository is created with <a href="https://nx.dev/">Nx</a>. It contains two React applications, one for the students and a dashboard application for the teacher. 
+This repository is created with <a href="https://nx.dev/">Nx</a>. It contains two React applications: one for the students and a dashboard application for the teacher. 
 
 Most components used in the application can be viewed en tested apart from the application in <a href="https://storybook.js.org/">Storybook</a>
 
